@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import os
 import ntpath
 from os import listdir
-from os.path import isdir, isdir, join
+from os.path import isdir, isfile, join
 
 #Lista de archivos a ignorar
 IGNORED_FILES = {
@@ -48,10 +47,3 @@ def getPathFileList(lst=[]):
             folderItems = folderToPathList(item)
             ret.extend(getPathFileList(folderItems))
     return ret
-
-if __name__ == "__main__":
-    l = []
-    l.append("/Users/Gally/Desktop/Sayonara Zetsubō Sensei")
-    a = getPathFileList(l)
-    for s in a:
-        print(s)
